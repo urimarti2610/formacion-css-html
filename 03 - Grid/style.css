@@ -1,0 +1,41 @@
+body {
+  font-family: Arial;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(auto-fill, 100px);
+  grid-gap: 1eM;
+}
+
+span {
+  box-sizing: border-box;
+  border: 2px solid;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.double-height {
+  grid-row: span 2;
+  color: orange;
+}
+
+.second-col {
+  grid-column: 2;
+  color: red;
+}
+
+.first-col {
+  grid-column: 1;
+  color: blue;
+}
+
+.double-width {
+  grid-column: span 2;
+  color: green;
+}

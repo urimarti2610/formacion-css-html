@@ -1,0 +1,69 @@
+body {
+  font-family: Arial;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+hr {
+  width: 100%;
+  border: 0;
+}
+
+/* Selecciona elementos con el atributo btn independientemente de su valor */
+[btn],
+[class],
+[href] {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  border: 1px solid;
+  padding: 1em;
+  margin: 1em;
+}
+
+/* Selecciona elementos con el atributo btn exactamente igual a "blue" */
+[btn="blue"], [class="blue"], .blue {
+  color: blue;
+}
+
+/* Selecciona elementos cuyo atributo btn comienza por "red" */
+[btn^="red"] {
+  color: red;
+}
+
+/* Selecciona elementos cuyo atributo btn termina por "orange" */
+[btn$="orange"] {
+  color: orange;
+}
+
+/* Selecciona elementos cuyo atributo btn contiene "btn-sm" */
+[btn*="btn-sm"] {
+  font-size: 0.5em;
+}
+
+/* Selecciona la palabra "btn", tanto si empieza o acaba con "btn", como si está rodeada de espacios.*/
+[btn~="btn"] {
+  border-radius: 5px;
+}
+
+/* Selecciona elementos con el atributo btn cuyo valor sea exactamente "btn" o empieza por "btn-" */
+[btn|="btn"] {
+  border-width: 3px;
+}
+
+/* Selecciona elementos cuyo href btn termina por ".pdf" */
+[href$=".pdf"]:after {
+  content: " [es un pdf]";
+}
+
+/* Selecciona elementos cuyo href btn empieza por "#" */
+[href^="#"]:after {
+  content: " [es un enlace interno]";
+}
